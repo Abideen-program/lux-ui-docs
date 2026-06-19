@@ -1,56 +1,54 @@
 import { Button } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
 export default function ButtonPage() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Button</h1>
-      <p className="section-sub">The fundamental interactive element. Supports variants, tones, sizes, loading state, ripple, and magnetic hover.</p>
+    <CompPageLayout
+      name="Button"
+      description="The fundamental interactive element. Supports variants, tones, sizes, loading state, ripple, and magnetic hover."
+    >
+      <div className="comp-section">
+        <SectionLabel>Variants</SectionLabel>
+        <PreviewBlock code={`<Button variant="solid">Solid</Button>\n<Button variant="outline">Outline</Button>\n<Button variant="ghost">Ghost</Button>\n<Button variant="soft">Soft</Button>`}>
+          <Button variant="solid">Solid</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button variant="soft">Soft</Button>
+        </PreviewBlock>
+      </div>
 
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Variants</h3>
-      <PreviewBlock code={`<Button variant="solid">Solid</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="ghost">Ghost</Button>
-<Button variant="soft">Soft</Button>`}>
-        <Button variant="solid">Solid</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="ghost">Ghost</Button>
-        <Button variant="soft">Soft</Button>
-      </PreviewBlock>
+      <div className="comp-section">
+        <SectionLabel>Tones</SectionLabel>
+        <PreviewBlock code={`<Button tone="primary">Primary</Button>\n<Button tone="success">Success</Button>\n<Button tone="danger">Danger</Button>\n<Button tone="warning">Warning</Button>`}>
+          <Button tone="primary">Primary</Button>
+          <Button tone="success">Success</Button>
+          <Button tone="danger">Danger</Button>
+          <Button tone="warning">Warning</Button>
+        </PreviewBlock>
+      </div>
 
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Tones</h3>
-      <PreviewBlock code={`<Button tone="primary">Primary</Button>
-<Button tone="success">Success</Button>
-<Button tone="danger">Danger</Button>
-<Button tone="warning">Warning</Button>`}>
-        <Button tone="primary">Primary</Button>
-        <Button tone="success">Success</Button>
-        <Button tone="danger">Danger</Button>
-        <Button tone="warning">Warning</Button>
-      </PreviewBlock>
+      <div className="comp-section">
+        <SectionLabel>Sizes</SectionLabel>
+        <PreviewBlock code={`<Button size="xs">XS</Button>\n<Button size="sm">SM</Button>\n<Button size="md">MD</Button>\n<Button size="lg">LG</Button>\n<Button size="xl">XL</Button>`}>
+          <Button size="xs">XS</Button>
+          <Button size="sm">SM</Button>
+          <Button size="md">MD</Button>
+          <Button size="lg">LG</Button>
+          <Button size="xl">XL</Button>
+        </PreviewBlock>
+      </div>
 
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Sizes</h3>
-      <PreviewBlock code={`<Button size="xs">Extra Small</Button>
-<Button size="sm">Small</Button>
-<Button size="md">Medium</Button>
-<Button size="lg">Large</Button>
-<Button size="xl">Extra Large</Button>`}>
-        <Button size="xs">Extra Small</Button>
-        <Button size="sm">Small</Button>
-        <Button size="md">Medium</Button>
-        <Button size="lg">Large</Button>
-        <Button size="xl">Extra Large</Button>
-      </PreviewBlock>
+      <div className="comp-section">
+        <SectionLabel>Loading & Magnetic</SectionLabel>
+        <PreviewBlock code={`<Button loading>Saving...</Button>\n<Button magnetic tone="accent">Hover me</Button>`}>
+          <Button loading>Saving...</Button>
+          <Button magnetic tone="accent">Hover me</Button>
+        </PreviewBlock>
+      </div>
 
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Loading &amp; Magnetic</h3>
-      <PreviewBlock code={`<Button loading>Saving...</Button>
-<Button magnetic tone="accent">Hover me</Button>`}>
-        <Button loading>Saving...</Button>
-        <Button magnetic tone="accent">Hover me</Button>
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
       <PropsTable rows={[
         { name: 'variant', type: "'solid' | 'outline' | 'ghost' | 'soft'", default: "'solid'", description: 'Visual style of the button.' },
         { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
@@ -61,8 +59,8 @@ export default function ButtonPage() {
         { name: 'magnetic', type: 'boolean', default: 'false', description: 'Cursor-following hover effect.' },
         { name: 'leftIcon', type: 'ReactNode', description: 'Icon before the label.' },
         { name: 'rightIcon', type: 'ReactNode', description: 'Icon after the label.' },
-        { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches the button to 100% width.' },
+        { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }

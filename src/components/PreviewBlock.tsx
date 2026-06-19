@@ -3,13 +3,12 @@
 import { useState, ReactNode } from 'react';
 
 export interface PreviewBlockProps {
-  /** The live rendered component */
   children: ReactNode;
-  /** Code to display, pre-tokenized as JSX-like markup (or plain string) */
   code: string;
+  title?: string;
 }
 
-export default function PreviewBlock({ children, code }: PreviewBlockProps) {
+export default function PreviewBlock({ children, code, title }: PreviewBlockProps) {
   const [tab, setTab] = useState<'preview' | 'code'>('preview');
   const [copied, setCopied] = useState(false);
 
@@ -21,18 +20,23 @@ export default function PreviewBlock({ children, code }: PreviewBlockProps) {
 
   return (
     <div className="preview-block">
+      <div className="preview-header">
+        <button className={`preview-tab-btn ${tab === 'preview' ? 'active' : ''}`} onClick={() => setTab('preview')}>
+          Preview
+        </button>
+        <button className={`preview-tab-btn ${tab === 'code' ? 'active' : ''}`} onClick={() => setTab('code')}>
+          Code
+        </button>
+        <button className={`preview-copy-btn ${copied ? 'copied' : ''}`} onClick={handleCopy}>
+          {copied ? '✓ Copied' : 'Copy'}
+        </button>
+      </div>
+
       {tab === 'preview' ? (
         <div className="preview-stage">{children}</div>
       ) : (
-        <div style={{ position: 'relative' }}>
-          <button className="copy-btn" onClick={handleCopy}>{copied ? 'Copied!' : 'Copy'}</button>
-          <pre className="preview-code">{code}</pre>
-        </div>
+        <pre className="preview-code-block">{code}</pre>
       )}
-      <div className="preview-tabs">
-        <div className={`preview-tab ${tab === 'preview' ? 'active' : ''}`} onClick={() => setTab('preview')}>Preview</div>
-        <div className={`preview-tab ${tab === 'code' ? 'active' : ''}`} onClick={() => setTab('code')}>Code</div>
-      </div>
     </div>
   );
 }

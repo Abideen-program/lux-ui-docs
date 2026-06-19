@@ -1,29 +1,26 @@
 import { Tooltip, IconButton } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
-export default function TooltipPage() {
+export default function Page() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Tooltip</h1>
-      <p className="section-sub">A short hover hint attached to any element.</p>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Basic</h3>
-      <PreviewBlock code={`<Tooltip content="Delete item">
-  <IconButton icon="🗑" aria-label="Delete" />
-</Tooltip>`}>
-        <Tooltip content="Delete item">
-          <IconButton icon="🗑" aria-label="Delete" />
-        </Tooltip>
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
+    <CompPageLayout name="Tooltip" description="A short hover hint attached to any element.">
+      <div className="comp-section">
+        <SectionLabel>Basic</SectionLabel>
+        <PreviewBlock code={`<Tooltip content="Delete item">\n  <IconButton icon="🗑" aria-label="Delete" />\n</Tooltip>`}>
+          <Tooltip content="Delete item">
+            <IconButton icon="🗑" aria-label="Delete" />
+          </Tooltip>
+        </PreviewBlock>
+      </div>
       <PropsTable rows={[
         { name: 'content', type: 'ReactNode', description: 'Tooltip text content.' },
         { name: 'children', type: 'ReactNode', description: 'The trigger element.' },
         { name: 'placement', type: "'top' | 'bottom' | 'left' | 'right'", default: "'top'", description: 'Tooltip position.' },
         { name: 'delay', type: 'number', default: '150', description: 'Delay before showing, in ms.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }

@@ -1,33 +1,20 @@
 import { Select } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
-export default function SelectPage() {
+export default function Page() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Select</h1>
-      <p className="section-sub">A native select element styled to match the Lux design system.</p>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Basic</h3>
-      <PreviewBlock code={`<Select
-  label="Country"
-  placeholder="Choose a country"
-  options={[
-    { value: 'ng', label: 'Nigeria' },
-    { value: 'us', label: 'United States' },
-  ]}
-/>`}>
-        <Select
-          label="Country"
-          placeholder="Choose a country"
-          options={[
-            { value: 'ng', label: 'Nigeria' },
-            { value: 'us', label: 'United States' },
-          ]}
-        />
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
+    <CompPageLayout name="Select" description="A native select element styled to match the Lux design system.">
+      <div className="comp-section">
+        <SectionLabel>Basic</SectionLabel>
+        <PreviewBlock code={`<Select label="Country" placeholder="Choose a country"\n  options={[{ value: 'ng', label: 'Nigeria' }, { value: 'us', label: 'United States' }]}\n/>`}>
+          <div style={{ width: '100%', maxWidth: 280 }}>
+            <Select label="Country" placeholder="Choose a country" options={[{ value: 'ng', label: 'Nigeria' }, { value: 'us', label: 'United States' }]} />
+          </div>
+        </PreviewBlock>
+      </div>
       <PropsTable rows={[
         { name: 'options', type: 'SelectOption[]', description: 'Array of { value, label, disabled? } objects.' },
         { name: 'label', type: 'string', description: 'Field label.' },
@@ -36,6 +23,6 @@ export default function SelectPage() {
         { name: 'error', type: 'string', description: 'Error message.' },
         { name: 'size', type: 'LuxSize', default: "'md'", description: 'Field size.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }

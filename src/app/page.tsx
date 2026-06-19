@@ -1,77 +1,105 @@
 import Link from 'next/link';
-import { Button, Card, GradientText, Badge, Avatar } from 'lux-ui';
+import { Button, Card, GradientText, Badge, Avatar, AvatarGroup } from 'lux-ui';
 
 const categories = [
-  { name: 'Inputs', count: 8, desc: 'Button, TextField, Select, Slider, Rating and more' },
-  { name: 'Data Display', count: 5, desc: 'Typography, Avatar, Badge, Chip, Table' },
-  { name: 'Feedback', count: 5, desc: 'Alert, Toast, Dialog, Progress, Skeleton' },
-  { name: 'Surfaces', count: 3, desc: 'Card, Accordion, AppBar' },
-  { name: 'Navigation', count: 5, desc: 'Tabs, Breadcrumbs, Pagination, Menu, Stepper' },
-  { name: 'Overlay', count: 4, desc: 'Modal, Drawer, Popover, Tooltip' },
-  { name: 'Layout', count: 4, desc: 'Box, Container, Grid, Stack' },
-  { name: 'Lux Exclusive', count: 7, desc: 'GradientText, TiltCard, Typewriter, Counter' },
+  { icon: '⌨️', name: 'Inputs', count: 8, desc: 'Button, TextField, Select, Slider, Rating…' },
+  { icon: '🔤', name: 'Data Display', count: 5, desc: 'Typography, Avatar, Badge, Chip, Table' },
+  { icon: '🔔', name: 'Feedback', count: 5, desc: 'Alert, Toast, Dialog, Progress, Skeleton' },
+  { icon: '🎨', name: 'Surfaces', count: 3, desc: 'Card (glass, neon, aurora), Accordion, AppBar' },
+  { icon: '🧭', name: 'Navigation', count: 5, desc: 'Tabs, Breadcrumbs, Pagination, Menu, Stepper' },
+  { icon: '🪟', name: 'Overlay', count: 4, desc: 'Modal, Drawer, Popover, Tooltip' },
+  { icon: '📐', name: 'Layout', count: 4, desc: 'Box, Container, Grid, Stack' },
+  { icon: '✨', name: 'Lux Exclusive', count: 7, desc: 'GradientText, TiltCard, Typewriter, Counter…' },
 ];
 
 export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="hero-mesh" />
-        <div className="hero-content">
-          <span className="hero-eyebrow">✦ 60 components · Phase 1</span>
-          <h1>Beautiful React components,<br />built on luxcss.</h1>
+        <div className="hero-bg" />
+        <div className="hero-inner">
+          <div className="hero-badge">✦ Phase 1 · 60 components</div>
+          <h1>
+            React components with<br />
+            <span className="hero-gradient-word">visual personality</span>
+          </h1>
           <p>
-            lux-ui gives you typed, accessible React components with the visual
-            personality of Lux baked in — glass surfaces, gradient text, magnetic
-            buttons, and motion, out of the box.
+            lux-ui gives you typed, production-ready React components with the visual magic of luxcss baked in — glass surfaces, gradient text, magnetic buttons, and motion, out of the box.
           </p>
-          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <Link href="/docs/installation">
-              <Button tone="primary" radius="full" size="lg" ripple magnetic>
-                Get Started
-              </Button>
+          <div className="hero-actions">
+            <Link href="/docs/installation" className="btn-primary">
+              Get Started →
             </Link>
-            <Link href="/components/button">
-              <Button variant="ghost" tone="neutral" radius="full" size="lg">
-                Browse Components →
-              </Button>
+            <Link href="/components/button" className="btn-secondary">
+              Browse Components
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="content-section">
-        <h2 className="section-heading">Live, not screenshots</h2>
-        <p className="section-sub">Every example on this site renders the real lux-ui component.</p>
+      <div className="page-content">
+        <div className="stat-row">
+          <div className="stat-item">
+            <div className="stat-num">60</div>
+            <div className="stat-label">components</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-num">85</div>
+            <div className="stat-label">named exports</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-num">8</div>
+            <div className="stat-label">categories</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-num">0</div>
+            <div className="stat-label">TS errors</div>
+          </div>
+        </div>
 
-        <Card variant="glass" radius="xl" style={{ maxWidth: 420, padding: '1.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-            <Avatar initials="AB" status="online" />
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '0.5rem' }}>
+          Live, not screenshots
+        </h2>
+        <p style={{ color: 'var(--fg-2)', fontSize: '0.9rem', marginBottom: '1.75rem' }}>
+          Every example renders the real lux-ui component — interactive and accurate.
+        </p>
+
+        <Card variant="glass" radius="xl" style={{ maxWidth: 400, padding: '1.5rem', marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem', marginBottom: '1.25rem' }}>
+            <AvatarGroup max={3}>
+              <Avatar initials="AB" status="online" />
+              <Avatar initials="CD" />
+              <Avatar initials="EF" />
+            </AvatarGroup>
             <div>
-              <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>Abideen</div>
-              <GradientText gradient="electric" style={{ fontSize: '0.78rem' }}>Pro Plan</GradientText>
+              <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>Team Dashboard</div>
+              <GradientText gradient="electric" style={{ fontSize: '0.75rem' }}>3 members online</GradientText>
             </div>
-            <Badge tone="success" style={{ marginLeft: 'auto' }}>Active</Badge>
+            <Badge tone="success" style={{ marginLeft: 'auto', fontSize: '0.7rem' }}>Live</Badge>
           </div>
           <Button tone="primary" radius="full" fullWidth ripple>
-            View Dashboard
+            Open Dashboard →
           </Button>
         </Card>
-      </section>
 
-      <section className="content-section">
-        <h2 className="section-heading">Browse by category</h2>
-        <p className="section-sub">60 components across 8 categories — fully typed, all production-ready.</p>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '0.5rem' }}>
+          Browse by category
+        </h2>
+        <p style={{ color: 'var(--fg-2)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+          60 components across 8 categories — fully typed, all production-ready.
+        </p>
 
-        <div className="comp-grid">
+        <div className="cat-grid">
           {categories.map(cat => (
-            <div key={cat.name} className="comp-card">
-              <div className="comp-card-name">{cat.name} <span style={{ color: 'var(--fg-dim)', fontWeight: 400 }}>· {cat.count}</span></div>
-              <div className="comp-card-desc">{cat.desc}</div>
+            <div key={cat.name} className="cat-card">
+              <div className="cat-card-icon">{cat.icon}</div>
+              <div className="cat-card-name">{cat.name}</div>
+              <div className="cat-card-count">{cat.count} components</div>
+              <div className="cat-card-desc">{cat.desc}</div>
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </>
   );
 }

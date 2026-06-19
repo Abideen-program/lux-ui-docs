@@ -1,45 +1,26 @@
 import { Table } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
 interface Row { name: string; role: string; status: string; }
 
-export default function TablePage() {
+export default function Page() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Table</h1>
-      <p className="section-sub">A typed data table with custom column rendering, striping, and density options.</p>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Basic</h3>
-      <PreviewBlock code={`<Table
-  columns={[
-    { key: 'name', header: 'Name' },
-    { key: 'role', header: 'Role' },
-    { key: 'status', header: 'Status' },
-  ]}
-  data={[
-    { name: 'Ada Lovelace', role: 'Engineer', status: 'Active' },
-    { name: 'Alan Turing', role: 'Researcher', status: 'Active' },
-  ]}
-  striped
-/>`}>
-        <div style={{ width: '100%' }}>
-          <Table<Row>
-            columns={[
-              { key: 'name', header: 'Name' },
-              { key: 'role', header: 'Role' },
-              { key: 'status', header: 'Status' },
-            ]}
-            data={[
-              { name: 'Ada Lovelace', role: 'Engineer', status: 'Active' },
-              { name: 'Alan Turing', role: 'Researcher', status: 'Active' },
-            ]}
-            striped
-          />
-        </div>
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
+    <CompPageLayout name="Table" description="A typed data table with custom column rendering, striping, and density options.">
+      <div className="comp-section">
+        <SectionLabel>Basic</SectionLabel>
+        <PreviewBlock code={`<Table\n  columns={[{ key: 'name', header: 'Name' }, { key: 'role', header: 'Role' }, { key: 'status', header: 'Status' }]}\n  data={[{ name: 'Ada Lovelace', role: 'Engineer', status: 'Active' }]}\n  striped\n/>`}>
+          <div style={{ width: '100%' }}>
+            <Table<Row>
+              columns={[{ key: 'name', header: 'Name' }, { key: 'role', header: 'Role' }, { key: 'status', header: 'Status' }]}
+              data={[{ name: 'Ada Lovelace', role: 'Engineer', status: 'Active' }, { name: 'Alan Turing', role: 'Researcher', status: 'Active' }]}
+              striped
+            />
+          </div>
+        </PreviewBlock>
+      </div>
       <PropsTable rows={[
         { name: 'columns', type: 'TableColumn<T>[]', description: 'Column definitions with key, header, optional render and align.' },
         { name: 'data', type: 'T[]', description: 'Row data.' },
@@ -49,6 +30,6 @@ export default function TablePage() {
         { name: 'dense', type: 'boolean', default: 'false', description: 'Reduces cell padding.' },
         { name: 'stickyHeader', type: 'boolean', default: 'false', description: 'Keeps header visible while scrolling.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }

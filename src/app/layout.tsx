@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import 'luxcss/dist/lux.css';
 import './globals.css';
 import LuxLoader from '@/components/LuxLoader';
-import Sidebar from '@/components/Sidebar';
+import ShellClient from '@/components/ShellClient';
 import { ToastProvider } from 'lux-ui';
 
 export const metadata: Metadata = {
@@ -16,10 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <LuxLoader />
         <ToastProvider>
-          <div className="docs-shell">
-            <Sidebar />
-            <main className="docs-main">{children}</main>
-          </div>
+          <ShellClient>{children}</ShellClient>
         </ToastProvider>
       </body>
     </html>

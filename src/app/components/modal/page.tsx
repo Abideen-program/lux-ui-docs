@@ -1,9 +1,10 @@
 'use client';
-
 import { useState } from 'react';
 import { Button, Modal } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
 function ModalDemo() {
   const [open, setOpen] = useState(false);
@@ -17,20 +18,15 @@ function ModalDemo() {
   );
 }
 
-export default function ModalPage() {
+export default function Page() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Modal</h1>
-      <p className="section-sub">A centered dialog with backdrop, Escape-to-close, and portal rendering.</p>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Basic</h3>
-      <PreviewBlock code={`<Modal open={open} onClose={() => setOpen(false)} title="Edit profile">
-  Modal content goes here.
-</Modal>`}>
-        <ModalDemo />
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
+    <CompPageLayout name="Modal" description="A centered dialog with backdrop, Escape-to-close, and portal rendering.">
+      <div className="comp-section">
+        <SectionLabel>Basic</SectionLabel>
+        <PreviewBlock code={`<Modal open={open} onClose={() => setOpen(false)} title="Edit profile">\n  Modal content goes here.\n</Modal>`}>
+          <ModalDemo />
+        </PreviewBlock>
+      </div>
       <PropsTable rows={[
         { name: 'open', type: 'boolean', description: 'Controls visibility.' },
         { name: 'onClose', type: '() => void', description: 'Called on backdrop click or Escape.' },
@@ -40,6 +36,6 @@ export default function ModalPage() {
         { name: 'closeOnBackdropClick', type: 'boolean', default: 'true', description: 'Close when clicking outside.' },
         { name: 'closeOnEscape', type: 'boolean', default: 'true', description: 'Close on Escape key.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }

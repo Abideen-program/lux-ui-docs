@@ -1,21 +1,20 @@
 import { Counter } from 'lux-ui';
 import PreviewBlock from '@/components/PreviewBlock';
 import PropsTable from '@/components/PropsTable';
+import CompPageLayout from '@/components/CompPageLayout';
+import SectionLabel from '@/components/SectionLabel';
 
-export default function CounterPage() {
+export default function Page() {
   return (
-    <section className="content-section">
-      <h1 className="section-heading">Counter</h1>
-      <p className="section-sub">Animated number count-up, with prefix/suffix and a thousands separator.</p>
-
-      <h3 style={{ fontSize: '1.05rem', marginBottom: '0.75rem' }}>Basic</h3>
-      <PreviewBlock code={`<Counter value={12450} prefix="$" suffix="+" duration={2000} triggerOnView={false} />`}>
-        <div style={{ fontSize: '2rem', fontWeight: 800 }}>
-          <Counter value={12450} prefix="$" suffix="+" duration={2000} triggerOnView={false} />
-        </div>
-      </PreviewBlock>
-
-      <h3 style={{ fontSize: '1.05rem', marginTop: '2rem' }}>Props</h3>
+    <CompPageLayout name="Counter" description="Animated number count-up, with prefix/suffix and a thousands separator.">
+      <div className="comp-section">
+        <SectionLabel>Basic</SectionLabel>
+        <PreviewBlock code={`<Counter value={12450} prefix="$" suffix="+" duration={2000} triggerOnView={false} />`}>
+          <div style={{ fontSize: '2rem', fontWeight: 800 }}>
+            <Counter value={12450} prefix="$" suffix="+" duration={2000} triggerOnView={false} />
+          </div>
+        </PreviewBlock>
+      </div>
       <PropsTable rows={[
         { name: 'value', type: 'number', description: 'Target value to count to.' },
         { name: 'duration', type: 'number', default: '1500', description: 'Animation duration in ms.' },
@@ -24,6 +23,6 @@ export default function CounterPage() {
         { name: 'suffix', type: 'string', description: 'Suffix text (e.g. "%", "+").' },
         { name: 'triggerOnView', type: 'boolean', default: 'true', description: 'Starts animation when scrolled into view.' },
       ]} />
-    </section>
+    </CompPageLayout>
   );
 }
