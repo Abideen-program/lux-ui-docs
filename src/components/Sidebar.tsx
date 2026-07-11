@@ -23,6 +23,10 @@ const nav = [
       { label: 'Switch', href: '/components/switch' },
       { label: 'Slider', href: '/components/slider' },
       { label: 'Rating', href: '/components/rating' },
+      { label: 'Autocomplete', href: '/components/autocomplete' },
+      { label: 'Textarea', href: '/components/textarea' },
+      { label: 'ButtonGroup', href: '/components/button-group' },
+      { label: 'ToggleButton', href: '/components/toggle-button' },
     ],
   },
   {
@@ -33,6 +37,9 @@ const nav = [
       { label: 'Badge', href: '/components/badge' },
       { label: 'Chip', href: '/components/chip' },
       { label: 'Table', href: '/components/table' },
+      { label: 'Divider', href: '/components/divider' },
+      { label: 'List', href: '/components/list' },
+      { label: 'ImageList', href: '/components/image-list' },
     ],
   },
   {
@@ -46,11 +53,22 @@ const nav = [
     ],
   },
   {
+    group: 'Layout',
+    items: [
+      { label: 'Box', href: '/components/box' },
+      { label: 'Container', href: '/components/container' },
+      { label: 'Grid', href: '/components/grid' },
+      { label: 'Stack', href: '/components/stack' },
+      { label: 'Masonry', href: '/components/masonry' },
+    ],
+  },
+  {
     group: 'Surfaces',
     items: [
       { label: 'Card', href: '/components/card' },
       { label: 'Accordion', href: '/components/accordion' },
       { label: 'AppBar', href: '/components/app-bar' },
+      { label: 'Paper', href: '/components/paper' },
     ],
   },
   {
@@ -61,6 +79,10 @@ const nav = [
       { label: 'Pagination', href: '/components/pagination' },
       { label: 'Menu', href: '/components/menu' },
       { label: 'Stepper', href: '/components/stepper' },
+      { label: 'Link', href: '/components/link' },
+      { label: 'BottomNavigation', href: '/components/bottom-navigation' },
+      { label: 'Menubar', href: '/components/menubar' },
+      { label: 'SpeedDial', href: '/components/speed-dial' },
     ],
   },
   {
@@ -70,6 +92,7 @@ const nav = [
       { label: 'Drawer', href: '/components/drawer' },
       { label: 'Popover', href: '/components/popover' },
       { label: 'Tooltip', href: '/components/tooltip' },
+      { label: 'Backdrop', href: '/components/backdrop' },
     ],
   },
   {
@@ -82,6 +105,25 @@ const nav = [
       { label: 'Typewriter', href: '/components/typewriter' },
       { label: 'Counter', href: '/components/counter' },
       { label: 'Timeline', href: '/components/timeline' },
+      { label: 'ColorPicker', href: '/components/color-picker' },
+      { label: 'Marquee', href: '/components/marquee' },
+      { label: 'CursorTrail', href: '/components/cursor-trail' },
+    ],
+  },
+  {
+    group: 'Advanced',
+    items: [
+      { label: 'DataGrid', href: '/components/data-grid' },
+      { label: 'DatePicker', href: '/components/date-picker' },
+      { label: 'TimePicker', href: '/components/time-picker' },
+      { label: 'FileUpload', href: '/components/file-upload' },
+      { label: 'TreeView', href: '/components/tree-view' },
+      { label: 'VirtualList', href: '/components/virtual-list' },
+      { label: 'Kanban', href: '/components/kanban' },
+      { label: 'Charts', href: '/components/charts' },
+      { label: 'CodeEditor', href: '/components/code-editor' },
+      { label: 'RichTextEditor', href: '/components/rich-text-editor' },
+      { label: 'InfiniteScroll', href: '/components/infinite-scroll' },
     ],
   },
 ];
