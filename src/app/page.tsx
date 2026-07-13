@@ -10,6 +10,7 @@ const categories = [
   { icon: '🪟', name: 'Overlay', count: 4, desc: 'Modal, Drawer, Popover, Tooltip' },
   { icon: '📐', name: 'Layout', count: 4, desc: 'Box, Container, Grid, Stack' },
   { icon: '✨', name: 'Lux Exclusive', count: 7, desc: 'GradientText, TiltCard, Typewriter, Counter…' },
+  { icon: '📊', name: 'Advanced', count: 11, desc: 'DataGrid, DatePicker, Charts, CodeEditor…' },
 ];
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-inner">
-          <div className="hero-badge">✦ Phase 1 · 60 components</div>
+          <div className="hero-badge">✦ Phase 1 + 2 · 73 components</div>
           <h1>
             React components with<br />
             <span className="hero-gradient-word">visual personality</span>
@@ -40,15 +41,15 @@ export default function HomePage() {
       <div className="page-content">
         <div className="stat-row">
           <div className="stat-item">
-            <div className="stat-num">60</div>
+            <div className="stat-num">73</div>
             <div className="stat-label">components</div>
           </div>
           <div className="stat-item">
-            <div className="stat-num">85</div>
+            <div className="stat-num">100</div>
             <div className="stat-label">named exports</div>
           </div>
           <div className="stat-item">
-            <div className="stat-num">8</div>
+            <div className="stat-num">9</div>
             <div className="stat-label">categories</div>
           </div>
           <div className="stat-item">
