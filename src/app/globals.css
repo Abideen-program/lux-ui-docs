@@ -396,7 +396,6 @@ img { display: block; max-width: 100%; }
 .preview-block {
   border: 1px solid var(--border-2);
   border-radius: var(--r-xl);
-  overflow: hidden;
   background: var(--bg-2);
   margin-bottom: 1.25rem;
 }
@@ -406,7 +405,9 @@ img { display: block; max-width: 100%; }
   align-items: center;
   padding: 0 1rem;
   border-bottom: 1px solid var(--border);
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
   gap: 0;
+  overflow: hidden;
 }
 
 .preview-tab-btn {
@@ -454,6 +455,9 @@ img { display: block; max-width: 100%; }
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 28px 28px;
   background-color: var(--bg-2);
+  border-radius: 0 0 var(--r-xl) var(--r-xl);
+  position: relative;
+  overflow: visible;
 }
 
 .preview-code-block {
@@ -465,6 +469,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.7;
   color: #c9d1d9;
   background: var(--bg-2);
+  border-radius: 0 0 var(--r-xl) var(--r-xl);
 }
 
 /* ── Props table ─────────────────────────────────────────────── */
