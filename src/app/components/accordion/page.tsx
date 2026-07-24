@@ -14,7 +14,6 @@ export default function Page() {
             <Accordion allowMultiple defaultOpen="a">
               <AccordionItem id="a" title="What is lux-ui?">A React component library powered by luxcss.</AccordionItem>
               <AccordionItem id="b" title="Is it free?">Yes, MIT licensed.</AccordionItem>
-              <AccordionItem id="c" title="Is lux-ui ready to use?">No, it is not yet ready.</AccordionItem>
             </Accordion>
           </div>
         </PreviewBlock>
