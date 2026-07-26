@@ -1,3 +1,3 @@
-import AccordionPage from "@/components/organisms/Accordion";
+import AccordionPage from "@/components/organisms/accordion";
 
 export default AccordionPage
