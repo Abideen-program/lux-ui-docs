@@ -1,3 +1,3 @@
-import AppBarPage from "@/components/app-bar";
+import AppBarPage from "@/components/organisms/app-bar";
 
 export default AppBarPage
