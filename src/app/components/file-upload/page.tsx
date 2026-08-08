@@ -1,9 +1,9 @@
 'use client';
 import { FileUpload } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
 
 export default function Page() {
   return (
@@ -12,7 +12,7 @@ export default function Page() {
         <SectionLabel>Basic</SectionLabel>
         <PreviewBlock code={`<FileUpload onFilesSelected={setFiles} multiple maxSizeMB={5} hint="PNG, JPG up to 5MB" />`}>
           <div style={{ width: '100%' }}>
-            <FileUpload onFilesSelected={() => {}} multiple maxSizeMB={5} hint="PNG, JPG up to 5MB" />
+            <FileUpload onFilesSelected={() => { }} multiple maxSizeMB={5} hint="PNG, JPG up to 5MB" />
           </div>
         </PreviewBlock>
       </div>

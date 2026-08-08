@@ -1,10 +1,10 @@
 'use client';
 import { Menu, Button } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
-import SampleDataBlock from '@/components/SampleDataBlock';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
+import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 
 export default function Page() {
   return (
@@ -18,10 +18,10 @@ export default function Page() {
         <SectionLabel>Basic</SectionLabel>
         <PreviewBlock code={`<Menu trigger={<Button variant="outline">Options</Button>} items={items} />`}>
           <Menu trigger={<Button variant="outline">Options</Button>} items={[
-            { label: 'Edit', onClick: () => {} },
-            { label: 'Duplicate', onClick: () => {} },
-            { divider: true, label: '', onClick: () => {} },
-            { label: 'Delete', danger: true, onClick: () => {} },
+            { label: 'Edit', onClick: () => { } },
+            { label: 'Duplicate', onClick: () => { } },
+            { divider: true, label: '', onClick: () => { } },
+            { label: 'Delete', danger: true, onClick: () => { } },
           ]} />
         </PreviewBlock>
       </div>

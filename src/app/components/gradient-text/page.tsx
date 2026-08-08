@@ -1,8 +1,8 @@
 import { GradientText } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
 
 export default function Page() {
   return (

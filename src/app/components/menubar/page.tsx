@@ -1,10 +1,10 @@
 'use client';
 import { Menubar } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
-import SampleDataBlock from '@/components/SampleDataBlock';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
+import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 
 export default function Page() {
   return (
@@ -17,8 +17,8 @@ export default function Page() {
         <SectionLabel>Basic</SectionLabel>
         <PreviewBlock code={`<Menubar menus={menus} />`}>
           <Menubar menus={[
-            { label: 'File', items: [{ label: 'New', onClick: () => {} }, { label: 'Open', onClick: () => {} }, { divider: true, label: '', onClick: () => {} }, { label: 'Exit', danger: true, onClick: () => {} }] },
-            { label: 'Edit', items: [{ label: 'Undo', onClick: () => {} }, { label: 'Redo', onClick: () => {} }] },
+            { label: 'File', items: [{ label: 'New', onClick: () => { } }, { label: 'Open', onClick: () => { } }, { divider: true, label: '', onClick: () => { } }, { label: 'Exit', danger: true, onClick: () => { } }] },
+            { label: 'Edit', items: [{ label: 'Undo', onClick: () => { } }, { label: 'Redo', onClick: () => { } }] },
           ]} />
         </PreviewBlock>
       </div>

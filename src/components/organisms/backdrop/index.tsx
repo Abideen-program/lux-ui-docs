@@ -1,6 +1,6 @@
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
 
 export default function BackdropPage() {
   return (

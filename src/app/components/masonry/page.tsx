@@ -1,8 +1,8 @@
 import { Masonry } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
 
 const heights = [60, 100, 75, 90, 50, 110];
 const box = { background: 'rgba(255,255,255,0.06)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.78rem' };

@@ -1,9 +1,9 @@
 'use client';
 import { Chip } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
 
 export default function Page() {
   return (
@@ -12,7 +12,7 @@ export default function Page() {
         <SectionLabel>Basic</SectionLabel>
         <PreviewBlock code={`<Chip tone="primary">React</Chip>\n<Chip tone="accent" onDelete={() => {}}>Removable</Chip>`}>
           <Chip tone="primary">React</Chip>
-          <Chip tone="accent" onDelete={() => {}}>Removable</Chip>
+          <Chip tone="accent" onDelete={() => { }}>Removable</Chip>
         </PreviewBlock>
       </div>
       <PropsTable rows={[

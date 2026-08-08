@@ -1,10 +1,10 @@
 'use client';
 import { SpeedDial } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
-import SampleDataBlock from '@/components/SampleDataBlock';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
+import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 
 export default function Page() {
   return (
@@ -20,7 +20,7 @@ export default function Page() {
           <div style={{ width: '100%', position: 'relative', height: 160 }}>
             <SpeedDial
               icon="+"
-              actions={[{ icon: '📝', label: 'Note', onClick: () => {} }, { icon: '📷', label: 'Photo', onClick: () => {} }]}
+              actions={[{ icon: '📝', label: 'Note', onClick: () => { } }, { icon: '📷', label: 'Photo', onClick: () => { } }]}
               style={{ position: 'absolute', bottom: 0, right: 0 }}
             />
           </div>

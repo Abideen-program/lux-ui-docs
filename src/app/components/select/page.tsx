@@ -1,9 +1,9 @@
 import { Select } from 'lux-ui';
-import PreviewBlock from '@/components/PreviewBlock';
-import PropsTable from '@/components/PropsTable';
-import CompPageLayout from '@/components/CompPageLayout';
-import SectionLabel from '@/components/SectionLabel';
-import SampleDataBlock from '@/components/SampleDataBlock';
+import PreviewBlock from '@/components/atoms/PreviewBlock';
+import PropsTable from '@/components/atoms/PropsTable';
+import CompPageLayout from '@/components/atoms/CompPageLayout';
+import SectionLabel from '@/components/atoms/SectionLabel';
+import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 
 export default function Page() {
   return (
