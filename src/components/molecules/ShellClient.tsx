@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Sidebar from './Sidebar';
-import Topbar from './Topbar';
+import Sidebar from '../Sidebar';
+import Topbar from '../Topbar';
 
 export default function ShellClient({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import 'luxcss/dist/lux.css';
 import './globals.css';
 import LuxLoader from '@/components/LuxLoader';
-import ShellClient from '@/components/ShellClient';
+import ShellClient from '@/components/molecules/ShellClient';
 import { ToastProvider } from 'lux-ui';
 
 export const metadata: Metadata = {
