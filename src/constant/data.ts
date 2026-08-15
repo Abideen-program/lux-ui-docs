@@ -121,3 +121,10 @@ export const nav = [
     ],
   },
 ];
+
+export const AccordionRows = [
+  { name: 'allowMultiple', type: 'boolean', default: 'false', description: 'Allow multiple items open at once.' },
+  { name: 'defaultOpen', type: 'string | string[]', description: 'Initially open item id(s).' },
+  { name: 'id', type: 'string', description: '(AccordionItem) Unique identifier.' },
+  { name: 'title', type: 'ReactNode', description: '(AccordionItem) Header content.' },
+]
