@@ -3,6 +3,7 @@ import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { AlertRows } from '@/constant/data';
 
 export default function AlertPage() {
   return (
@@ -16,13 +17,7 @@ export default function AlertPage() {
           </div>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'tone', type: 'LuxTone', default: "'info'", description: 'Color tone.' },
-        { name: 'title', type: 'ReactNode', description: 'Bold title text.' },
-        { name: 'icon', type: 'ReactNode', description: 'Custom icon (defaults based on tone).' },
-        { name: 'variant', type: "'solid' | 'soft' | 'outline'", default: "'soft'", description: 'Visual style.' },
-        { name: 'onClose', type: '() => void', description: 'Shows a close button when provided.' },
-      ]} />
+      <PropsTable rows={AlertRows} />
     </CompPageLayout>
   );
 }

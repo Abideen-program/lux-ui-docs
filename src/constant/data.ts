@@ -128,3 +128,11 @@ export const AccordionRows = [
   { name: 'id', type: 'string', description: '(AccordionItem) Unique identifier.' },
   { name: 'title', type: 'ReactNode', description: '(AccordionItem) Header content.' },
 ]
+
+export const AlertRows = [
+  { name: 'tone', type: 'LuxTone', default: "'info'", description: 'Color tone.' },
+  { name: 'title', type: 'ReactNode', description: 'Bold title text.' },
+  { name: 'icon', type: 'ReactNode', description: 'Custom icon (defaults based on tone).' },
+  { name: 'variant', type: "'solid' | 'soft' | 'outline'", default: "'soft'", description: 'Visual style.' },
+  { name: 'onClose', type: '() => void', description: 'Shows a close button when provided.' },
+]
