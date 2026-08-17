@@ -136,3 +136,12 @@ export const AlertRows = [
   { name: 'variant', type: "'solid' | 'soft' | 'outline'", default: "'soft'", description: 'Visual style.' },
   { name: 'onClose', type: '() => void', description: 'Shows a close button when provided.' },
 ]
+
+export const AppBarRows = [
+  { name: 'left', type: 'ReactNode', description: 'Content on the left (logo, title).' },
+  { name: 'center', type: 'ReactNode', description: 'Center content (search, nav).' },
+  { name: 'right', type: 'ReactNode', description: 'Content on the right (actions, avatar).' },
+  { name: 'variant', type: "'solid' | 'glass' | 'transparent'", default: "'glass'", description: 'Background style.' },
+  { name: 'sticky', type: 'boolean', default: 'false', description: 'Sticks to the top of the viewport.' },
+  { name: 'height', type: 'number', default: '64', description: 'Bar height in px.' },
+]
