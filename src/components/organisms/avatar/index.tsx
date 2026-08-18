@@ -3,6 +3,9 @@ import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { AvatarRows } from '@/constant/data';
+
+const avatarInitials = ['A', 'B', 'C', 'D', 'E']
 
 export default function AvatarPage() {
   return (
@@ -19,17 +22,13 @@ export default function AvatarPage() {
         <SectionLabel>AvatarGroup</SectionLabel>
         <PreviewBlock code={`<AvatarGroup max={3}>\n  <Avatar initials="A" /><Avatar initials="B" /><Avatar initials="C" />\n  <Avatar initials="D" /><Avatar initials="E" />\n</AvatarGroup>`}>
           <AvatarGroup max={3}>
-            <Avatar initials="A" /><Avatar initials="B" /><Avatar initials="C" /><Avatar initials="D" /><Avatar initials="E" />
+            {
+              avatarInitials.map((initial, idx) => <Avatar key={idx} initials={initial} />)
+            }
           </AvatarGroup>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'src', type: 'string', description: 'Image URL.' },
-        { name: 'initials', type: 'string', description: 'Fallback initials when no image.' },
-        { name: 'size', type: 'LuxSize', default: "'md'", description: 'Avatar dimensions.' },
-        { name: 'status', type: "'online' | 'offline' | 'away' | 'busy'", description: 'Status indicator dot.' },
-        { name: 'tone', type: 'LuxTone', description: 'Background tone (used when no src/color).' },
-      ]} />
+      <PropsTable rows={AvatarRows} />
     </CompPageLayout>
   );
 }

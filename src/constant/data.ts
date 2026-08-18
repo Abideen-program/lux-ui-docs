@@ -155,3 +155,11 @@ export const AutoCompleteRows = [
   { name: 'noOptionsText', type: 'string', default: "'No options'", description: 'Shown when the filtered list is empty.' },
   { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
 ]
+
+export const AvatarRows = [
+  { name: 'src', type: 'string', description: 'Image URL.' },
+  { name: 'initials', type: 'string', description: 'Fallback initials when no image.' },
+  { name: 'size', type: 'LuxSize', default: "'md'", description: 'Avatar dimensions.' },
+  { name: 'status', type: "'online' | 'offline' | 'away' | 'busy'", description: 'Status indicator dot.' },
+  { name: 'tone', type: 'LuxTone', description: 'Background tone (used when no src/color).' },
+]
