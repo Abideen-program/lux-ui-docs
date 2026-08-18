@@ -145,3 +145,13 @@ export const AppBarRows = [
   { name: 'sticky', type: 'boolean', default: 'false', description: 'Sticks to the top of the viewport.' },
   { name: 'height', type: 'number', default: '64', description: 'Bar height in px.' },
 ]
+
+export const AutoCompleteRows = [
+  { name: 'options', type: 'AutocompleteOption[]', description: 'Array of { value, label } objects.' },
+  { name: 'value', type: 'string', description: 'Controlled input text.' },
+  { name: 'onChange', type: '(value: string) => void', description: 'Called with the selected option value.' },
+  { name: 'placeholder', type: 'string', default: "'Search…'", description: 'Input placeholder.' },
+  { name: 'label', type: 'string', description: 'Field label.' },
+  { name: 'noOptionsText', type: 'string', default: "'No options'", description: 'Shown when the filtered list is empty.' },
+  { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
+]

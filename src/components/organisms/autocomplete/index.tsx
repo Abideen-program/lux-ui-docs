@@ -6,6 +6,9 @@ import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
+import { AutoCompleteRows } from '@/constant/data';
+
+const options = [{ value: '1', label: 'Apple' }, { value: '2', label: 'Banana' }, { value: '3', label: 'Cherry' }]
 
 export default function AutoCompletePage() {
   const [value, setValue] = useState('');
@@ -22,7 +25,7 @@ export default function AutoCompletePage() {
         <PreviewBlock code={`<Autocomplete options={options} onChange={setValue} label="Fruit" />`}>
           <div style={{ width: '100%', maxWidth: 280 }}>
             <Autocomplete
-              options={[{ value: '1', label: 'Apple' }, { value: '2', label: 'Banana' }, { value: '3', label: 'Cherry' }]}
+              options={options}
               onChange={setValue}
               label="Fruit"
             />
@@ -30,15 +33,7 @@ export default function AutoCompletePage() {
         </PreviewBlock>
       </div>
 
-      <PropsTable rows={[
-        { name: 'options', type: 'AutocompleteOption[]', description: 'Array of { value, label } objects.' },
-        { name: 'value', type: 'string', description: 'Controlled input text.' },
-        { name: 'onChange', type: '(value: string) => void', description: 'Called with the selected option value.' },
-        { name: 'placeholder', type: 'string', default: "'Search…'", description: 'Input placeholder.' },
-        { name: 'label', type: 'string', description: 'Field label.' },
-        { name: 'noOptionsText', type: 'string', default: "'No options'", description: 'Shown when the filtered list is empty.' },
-        { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
-      ]} />
+      <PropsTable rows={AutoCompleteRows} />
     </CompPageLayout>
   );
 }
