@@ -163,3 +163,11 @@ export const AvatarRows = [
   { name: 'status', type: "'online' | 'offline' | 'away' | 'busy'", description: 'Status indicator dot.' },
   { name: 'tone', type: 'LuxTone', description: 'Background tone (used when no src/color).' },
 ]
+
+export const BackdropRows = [
+  { name: 'open', type: 'boolean', default: 'true', description: 'Whether the backdrop is visible.' },
+  { name: 'blur', type: 'number', default: '4', description: 'Backdrop blur amount in px.' },
+  { name: 'opacity', type: 'number', default: '0.55', description: 'Background dim opacity (0-1).' },
+  { name: 'onClick', type: '() => void', description: 'Click handler — typically closes the overlay.' },
+  { name: 'zIndex', type: 'number', default: '1000', description: 'Stack order.' },
+]
