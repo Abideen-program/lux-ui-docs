@@ -1,8 +1,16 @@
-import { Badge } from 'lux-ui';
+import { Badge, type LuxTone } from 'lux-ui';
 import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { BadgeRows } from '@/constant/data';
+
+const badgeData: { tone: LuxTone; title: string }[] = [
+  { tone: 'primary', title: 'New' },
+  { tone: 'success', title: 'Active' },
+  { tone: 'danger', title: 'Failed' },
+  { tone: 'warning', title: 'Pending' },
+]
 
 export default function BadgePage() {
   return (
@@ -10,18 +18,12 @@ export default function BadgePage() {
       <div className="comp-section">
         <SectionLabel>Tones</SectionLabel>
         <PreviewBlock code={`<Badge tone="primary">New</Badge>\n<Badge tone="success">Active</Badge>\n<Badge tone="danger">Failed</Badge>\n<Badge tone="warning">Pending</Badge>`}>
-          <Badge tone="primary">New</Badge>
-          <Badge tone="success">Active</Badge>
-          <Badge tone="danger">Failed</Badge>
-          <Badge tone="warning">Pending</Badge>
+          {
+            badgeData.map((badge, idx) => <Badge key={idx} tone={badge.tone}>{badge.title}</Badge>)
+          }
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
-        { name: 'variant', type: "'default' | 'dot' | 'counter' | 'pill'", default: "'default'", description: 'Badge style.' },
-        { name: 'size', type: 'LuxSize', default: "'md'", description: 'Badge size.' },
-        { name: 'count', type: 'number', description: 'Number shown when variant is "counter".' },
-      ]} />
+      <PropsTable rows={BadgeRows} />
     </CompPageLayout>
   );
 }

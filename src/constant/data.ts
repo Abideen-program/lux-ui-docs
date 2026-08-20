@@ -171,3 +171,10 @@ export const BackdropRows = [
   { name: 'onClick', type: '() => void', description: 'Click handler — typically closes the overlay.' },
   { name: 'zIndex', type: 'number', default: '1000', description: 'Stack order.' },
 ]
+
+export const BadgeRows = [
+  { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
+  { name: 'variant', type: "'default' | 'dot' | 'counter' | 'pill'", default: "'default'", description: 'Badge style.' },
+  { name: 'size', type: 'LuxSize', default: "'md'", description: 'Badge size.' },
+  { name: 'count', type: 'number', description: 'Number shown when variant is "counter".' },
+]
