@@ -178,3 +178,10 @@ export const BadgeRows = [
   { name: 'size', type: 'LuxSize', default: "'md'", description: 'Badge size.' },
   { name: 'count', type: 'number', description: 'Number shown when variant is "counter".' },
 ]
+
+export const BottomNavigationRows = [
+  { name: 'items', type: 'BottomNavItem[]', description: 'Array of { label, icon, value, badge? }.' },
+  { name: 'value', type: 'string', description: 'Currently active item value.' },
+  { name: 'onChange', type: '(value: string) => void', description: 'Change handler.' },
+  { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Active item color.' },
+]

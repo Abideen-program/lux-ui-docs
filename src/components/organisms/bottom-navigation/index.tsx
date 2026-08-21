@@ -6,6 +6,7 @@ import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
+import { BottomNavigationRows } from '@/constant/data';
 
 export default function BottomNavigationPage() {
   const [nav, setNav] = useState('home');
@@ -29,12 +30,7 @@ export default function BottomNavigationPage() {
           </div>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'items', type: 'BottomNavItem[]', description: 'Array of { label, icon, value, badge? }.' },
-        { name: 'value', type: 'string', description: 'Currently active item value.' },
-        { name: 'onChange', type: '(value: string) => void', description: 'Change handler.' },
-        { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Active item color.' },
-      ]} />
+      <PropsTable rows={BottomNavigationRows} />
     </CompPageLayout>
   );
 }
