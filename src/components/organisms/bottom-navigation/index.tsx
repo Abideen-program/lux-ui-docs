@@ -8,6 +8,12 @@ import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 import { BottomNavigationRows } from '@/constant/data';
 
+const BottomNavigationItems = [
+  { label: 'Home', icon: '🏠', value: 'home' },
+  { label: 'Search', icon: '🔍', value: 'search' },
+  { label: 'Inbox', icon: '📥', value: 'inbox', badge: 3 },
+]
+
 export default function BottomNavigationPage() {
   const [nav, setNav] = useState('home');
 
@@ -22,11 +28,7 @@ export default function BottomNavigationPage() {
         <p style={{ fontSize: '0.8rem', color: 'var(--fg-3)', marginBottom: '0.75rem' }}>BottomNavigation uses fixed positioning in real apps — shown here inline for the preview.</p>
         <PreviewBlock code={`<BottomNavigation value={nav} onChange={setNav} items={items} />`}>
           <div style={{ width: '100%', position: 'relative', height: 60 }}>
-            <BottomNavigation value={nav} onChange={setNav} items={[
-              { label: 'Home', icon: '🏠', value: 'home' },
-              { label: 'Search', icon: '🔍', value: 'search' },
-              { label: 'Inbox', icon: '📥', value: 'inbox', badge: 3 },
-            ]} style={{ position: 'absolute' }} />
+            <BottomNavigation value={nav} onChange={setNav} items={BottomNavigationItems} style={{ position: 'absolute' }} />
           </div>
         </PreviewBlock>
       </div>
