@@ -3,6 +3,7 @@ import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { BoxRows } from '@/constant/data';
 
 export default function BoxPage() {
   return (
@@ -13,12 +14,7 @@ export default function BoxPage() {
           <Box p={4} style={{ background: 'rgba(255,255,255,0.06)', borderRadius: 8 }}>Padded box</Box>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'as', type: 'ElementType', default: "'div'", description: 'Render as a different element.' },
-        { name: 'p / px / py', type: 'number | string', description: 'Padding (number = multiples of 0.25rem).' },
-        { name: 'm / mx / my', type: 'number | string', description: 'Margin (number = multiples of 0.25rem).' },
-        { name: 'w / h', type: 'number | string', description: 'Width / height.' },
-      ]} />
+      <PropsTable rows={BoxRows} />
     </CompPageLayout>
   );
 }

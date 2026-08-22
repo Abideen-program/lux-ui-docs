@@ -185,3 +185,10 @@ export const BottomNavigationRows = [
   { name: 'onChange', type: '(value: string) => void', description: 'Change handler.' },
   { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Active item color.' },
 ]
+
+export const BoxRows = [
+  { name: 'as', type: 'ElementType', default: "'div'", description: 'Render as a different element.' },
+  { name: 'p / px / py', type: 'number | string', description: 'Padding (number = multiples of 0.25rem).' },
+  { name: 'm / mx / my', type: 'number | string', description: 'Margin (number = multiples of 0.25rem).' },
+  { name: 'w / h', type: 'number | string', description: 'Width / height.' },
+]
