@@ -4,6 +4,7 @@ import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
+import { BreadcrumbsRows } from '@/constant/data';
 
 export default function BreadcrumbsPage() {
   return (
@@ -20,11 +21,7 @@ export default function BreadcrumbsPage() {
         </PreviewBlock>
       </div>
 
-      <PropsTable rows={[
-        { name: 'items', type: 'BreadcrumbItem[]', description: 'Array of { label, href?, icon?, onClick? }.' },
-        { name: 'separator', type: 'ReactNode', default: "'/'", description: 'Separator between items.' },
-        { name: 'maxItems', type: 'number', description: 'Collapses middle items with an ellipsis.' },
-      ]} />
+      <PropsTable rows={BreadcrumbsRows} />
     </CompPageLayout>
   );
 }

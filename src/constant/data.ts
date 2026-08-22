@@ -192,3 +192,10 @@ export const BoxRows = [
   { name: 'm / mx / my', type: 'number | string', description: 'Margin (number = multiples of 0.25rem).' },
   { name: 'w / h', type: 'number | string', description: 'Width / height.' },
 ]
+
+export const BreadcrumbsRows = [
+  { name: 'items', type: 'BreadcrumbItem[]', description: 'Array of { label, href?, icon?, onClick? }.' },
+  { name: 'separator', type: 'ReactNode', default: "'/'", description: 'Separator between items.' },
+  { name: 'maxItems', type: 'number', description: 'Collapses middle items with an ellipsis.' },
+]
+
