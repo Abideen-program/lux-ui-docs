@@ -199,3 +199,15 @@ export const BreadcrumbsRows = [
   { name: 'maxItems', type: 'number', description: 'Collapses middle items with an ellipsis.' },
 ]
 
+export const ButtonRows = [
+  { name: 'variant', type: "'solid' | 'outline' | 'ghost' | 'soft'", default: "'solid'", description: 'Visual style of the button.' },
+  { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
+  { name: 'size', type: 'LuxSize', default: "'md'", description: 'Size of the button.' },
+  { name: 'radius', type: 'LuxRadius', default: "'full'", description: 'Border radius.' },
+  { name: 'loading', type: 'boolean', default: 'false', description: 'Shows a spinner and disables the button.' },
+  { name: 'ripple', type: 'boolean', default: 'true', description: 'Click ripple effect.' },
+  { name: 'magnetic', type: 'boolean', default: 'false', description: 'Cursor-following hover effect.' },
+  { name: 'leftIcon', type: 'ReactNode', description: 'Icon before the label.' },
+  { name: 'rightIcon', type: 'ReactNode', description: 'Icon after the label.' },
+  { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
+]

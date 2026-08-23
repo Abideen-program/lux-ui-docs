@@ -1,8 +1,16 @@
-import { Button } from 'lux-ui';
+import { Button, LuxVariant } from 'lux-ui';
 import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { ButtonRows } from '@/constant/data';
+
+const ButtonVariants: {variant: LuxVariant, text: string}[] = [
+  { variant: 'solid', text: 'Solid' },
+  { variant: 'outline', text: 'Outline' },
+  { variant: 'ghost', text: 'Ghost' },
+  { variant: 'soft', text: 'Soft' },
+]
 
 export default function ButtonPage() {
   return (
@@ -13,10 +21,9 @@ export default function ButtonPage() {
       <div className="comp-section">
         <SectionLabel>Variants</SectionLabel>
         <PreviewBlock code={`<Button variant="solid">Solid</Button>\n<Button variant="outline">Outline</Button>\n<Button variant="ghost">Ghost</Button>\n<Button variant="soft">Soft</Button>`}>
-          <Button variant="solid">Solid</Button>
-          <Button variant="outline">Outline</Button>
-          <Button variant="ghost">Ghost</Button>
-          <Button variant="soft">Soft</Button>
+          {
+            ButtonVariants.map((buttonVariant, idx) => <Button key={idx} variant={buttonVariant.variant}>{buttonVariant.text}</Button>)
+          }
         </PreviewBlock>
       </div>
 
@@ -49,18 +56,7 @@ export default function ButtonPage() {
         </PreviewBlock>
       </div>
 
-      <PropsTable rows={[
-        { name: 'variant', type: "'solid' | 'outline' | 'ghost' | 'soft'", default: "'solid'", description: 'Visual style of the button.' },
-        { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
-        { name: 'size', type: 'LuxSize', default: "'md'", description: 'Size of the button.' },
-        { name: 'radius', type: 'LuxRadius', default: "'full'", description: 'Border radius.' },
-        { name: 'loading', type: 'boolean', default: 'false', description: 'Shows a spinner and disables the button.' },
-        { name: 'ripple', type: 'boolean', default: 'true', description: 'Click ripple effect.' },
-        { name: 'magnetic', type: 'boolean', default: 'false', description: 'Cursor-following hover effect.' },
-        { name: 'leftIcon', type: 'ReactNode', description: 'Icon before the label.' },
-        { name: 'rightIcon', type: 'ReactNode', description: 'Icon after the label.' },
-        { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
-      ]} />
+      <PropsTable rows={ButtonRows} />
     </CompPageLayout>
   );
 }
