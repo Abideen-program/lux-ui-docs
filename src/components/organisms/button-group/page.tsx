@@ -3,6 +3,7 @@ import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { ButtonGroupRows } from '@/constant/data';
 
 export default function ButtonGroupPage() {
   return (
@@ -17,11 +18,7 @@ export default function ButtonGroupPage() {
           </ButtonGroup>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'orientation', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: 'Layout direction.' },
-        { name: 'variant', type: 'LuxVariant', description: 'Applies to all child Buttons unless overridden.' },
-        { name: 'tone', type: 'LuxTone', description: 'Applies to all child Buttons unless overridden.' },
-      ]} />
+      <PropsTable rows={ButtonGroupRows} />
     </CompPageLayout>
   );
 }

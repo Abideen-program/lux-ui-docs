@@ -211,3 +211,9 @@ export const ButtonRows = [
   { name: 'rightIcon', type: 'ReactNode', description: 'Icon after the label.' },
   { name: 'fullWidth', type: 'boolean', default: 'false', description: 'Stretches to 100% width.' },
 ]
+
+export const ButtonGroupRows = [
+  { name: 'orientation', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: 'Layout direction.' },
+  { name: 'variant', type: 'LuxVariant', description: 'Applies to all child Buttons unless overridden.' },
+  { name: 'tone', type: 'LuxTone', description: 'Applies to all child Buttons unless overridden.' },
+]
