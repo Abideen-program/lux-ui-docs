@@ -3,6 +3,7 @@ import PreviewBlock from '@/components/atoms/PreviewBlock';
 import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
+import { CardRows } from '@/constant/data';
 
 export default function CardPage() {
   return (
@@ -23,14 +24,7 @@ export default function CardPage() {
           <Card elevation="float" style={{ padding: '1.25rem' }}>Float</Card>
         </PreviewBlock>
       </div>
-      <PropsTable rows={[
-        { name: 'variant', type: "'default' | 'glass' | 'neon' | 'aurora' | 'matte' | 'raised' | 'outline'", default: "'default'", description: 'Visual style of the card.' },
-        { name: 'radius', type: 'LuxRadius', default: "'xl'", description: 'Border radius.' },
-        { name: 'size', type: 'LuxSize', default: "'md'", description: 'Internal padding density.' },
-        { name: 'hoverable', type: 'boolean', default: 'false', description: 'Adds a subtle hover motion effect.' },
-        { name: 'glow', type: 'boolean', default: 'false', description: 'Adds a soft glow.' },
-        { name: 'elevation', type: "'none' | 'xs' | 'low' | 'mid' | 'high' | 'float'", default: "'low'", description: 'Shadow depth.' },
-      ]} />
+      <PropsTable rows={CardRows} />
     </CompPageLayout>
   );
 }

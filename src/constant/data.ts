@@ -217,3 +217,12 @@ export const ButtonGroupRows = [
   { name: 'variant', type: 'LuxVariant', description: 'Applies to all child Buttons unless overridden.' },
   { name: 'tone', type: 'LuxTone', description: 'Applies to all child Buttons unless overridden.' },
 ]
+
+export const CardRows = [
+  { name: 'variant', type: "'default' | 'glass' | 'neon' | 'aurora' | 'matte' | 'raised' | 'outline'", default: "'default'", description: 'Visual style of the card.' },
+  { name: 'radius', type: 'LuxRadius', default: "'xl'", description: 'Border radius.' },
+  { name: 'size', type: 'LuxSize', default: "'md'", description: 'Internal padding density.' },
+  { name: 'hoverable', type: 'boolean', default: 'false', description: 'Adds a subtle hover motion effect.' },
+  { name: 'glow', type: 'boolean', default: 'false', description: 'Adds a soft glow.' },
+  { name: 'elevation', type: "'none' | 'xs' | 'low' | 'mid' | 'high' | 'float'", default: "'low'", description: 'Shadow depth.' },
+]
