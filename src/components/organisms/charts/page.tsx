@@ -4,6 +4,7 @@ import PropsTable from '@/components/atoms/PropsTable';
 import CompPageLayout from '@/components/atoms/CompPageLayout';
 import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
+import { ChartRows } from '@/constant/data';
 
 const data = [
   { label: 'Jan', value: 30 },
@@ -46,16 +47,7 @@ export default function ChartsPage() {
         </PreviewBlock>
       </div>
 
-      <PropsTable rows={[
-        { name: 'data', type: 'ChartDataPoint[]', description: 'Array of { label, value, tone? }.' },
-        { name: 'tone', type: 'LuxTone', default: "'primary'", description: '(Bar/Line) Single-series color.' },
-        { name: 'showValues', type: 'boolean', default: 'true', description: '(BarChart) Show numeric labels.' },
-        { name: 'horizontal', type: 'boolean', default: 'false', description: '(BarChart) Horizontal bar orientation.' },
-        { name: 'showArea', type: 'boolean', default: 'false', description: '(LineChart) Fill area under the line.' },
-        { name: 'showDots', type: 'boolean', default: 'true', description: '(LineChart) Show point markers.' },
-        { name: 'innerRadiusRatio', type: 'number', default: '0', description: '(PieChart) 0 = pie, >0 = donut hole ratio.' },
-        { name: 'showLegend', type: 'boolean', default: 'true', description: '(PieChart) Show color legend.' },
-      ]} />
+      <PropsTable rows={ChartRows} />
     </CompPageLayout>
   );
 }
