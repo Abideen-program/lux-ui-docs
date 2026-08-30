@@ -237,3 +237,11 @@ export const ChartRows = [
   { name: 'innerRadiusRatio', type: 'number', default: '0', description: '(PieChart) 0 = pie, >0 = donut hole ratio.' },
   { name: 'showLegend', type: 'boolean', default: 'true', description: '(PieChart) Show color legend.' },
 ]
+
+export const CheckboxRows = [
+  { name: 'label', type: 'string', description: 'Label text.' },
+  { name: 'hint', type: 'string', description: 'Helper text below the label.' },
+  { name: 'size', type: 'LuxSize', default: "'md'", description: 'Checkbox dimensions.' },
+  { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color when checked.' },
+  { name: 'indeterminate', type: 'boolean', default: 'false', description: 'Shows a dash instead of a checkmark.' },
+]
