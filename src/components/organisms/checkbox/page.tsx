@@ -6,7 +6,7 @@ import SectionLabel from '@/components/atoms/SectionLabel';
 import SampleDataBlock from '@/components/atoms/SampleDataBlock';
 import { CheckboxRows } from '@/constant/data';
 
-export default function Page() {
+export default function CheckBoxPage() {
   return (
     <CompPageLayout name="Checkbox" description="Checkbox and RadioGroup for binary and single-choice selections.">
       <div className="comp-section">
