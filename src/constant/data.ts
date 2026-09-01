@@ -245,3 +245,12 @@ export const CheckboxRows = [
   { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color when checked.' },
   { name: 'indeterminate', type: 'boolean', default: 'false', description: 'Shows a dash instead of a checkmark.' },
 ]
+
+export const ChipRows = [
+  { name: 'tone', type: 'LuxTone', default: "'primary'", description: 'Color tone.' },
+  { name: 'variant', type: 'LuxVariant', default: "'soft'", description: 'Visual style.' },
+  { name: 'size', type: 'LuxSize', default: "'sm'", description: 'Chip size.' },
+  { name: 'icon', type: 'ReactNode', description: 'Leading icon.' },
+  { name: 'onDelete', type: '(e) => void', description: 'Shows a delete button when provided.' },
+  { name: 'selected', type: 'boolean', default: 'false', description: 'Adds a selected outline.' },
+]
