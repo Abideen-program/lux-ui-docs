@@ -254,3 +254,13 @@ export const ChipRows = [
   { name: 'onDelete', type: '(e) => void', description: 'Shows a delete button when provided.' },
   { name: 'selected', type: 'boolean', default: 'false', description: 'Adds a selected outline.' },
 ]
+
+export const CodeEditorRows = [
+  { name: 'value', type: 'string', description: 'Code content.' },
+  { name: 'onChange', type: '(value: string) => void', description: 'Change handler.' },
+  { name: 'language', type: 'string', default: "'text'", description: 'Label shown in the header bar.' },
+  { name: 'readOnly', type: 'boolean', default: 'false', description: 'Disables editing.' },
+  { name: 'height', type: 'number | string', default: '280', description: 'Editor height.' },
+  { name: 'showLineNumbers', type: 'boolean', default: 'true', description: 'Shows the line number gutter.' },
+  { name: 'fontSize', type: 'number', default: '13', description: 'Font size in px.' },
+]
