@@ -264,3 +264,10 @@ export const CodeEditorRows = [
   { name: 'showLineNumbers', type: 'boolean', default: 'true', description: 'Shows the line number gutter.' },
   { name: 'fontSize', type: 'number', default: '13', description: 'Font size in px.' },
 ]
+
+export const ColorPickerRows = [
+  { name: 'value', type: 'string', default: "'#6366f1'", description: 'Current hex color.' },
+  { name: 'onChange', type: '(color: string) => void', description: 'Change handler.' },
+  { name: 'presets', type: 'string[]', description: 'Array of hex swatches shown above the native picker.' },
+  { name: 'label', type: 'string', description: 'Field label.' },
+]
